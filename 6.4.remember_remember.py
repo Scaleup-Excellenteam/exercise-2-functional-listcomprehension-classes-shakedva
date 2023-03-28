@@ -13,7 +13,7 @@ def find_hidden_messages(path):
     return "".join(hidden_msg)
 
 
-find_hidden_messages('code.png')
+print(find_hidden_messages('code.png'))
 
 # naive solution
 # def find_hidden_messages(path):
