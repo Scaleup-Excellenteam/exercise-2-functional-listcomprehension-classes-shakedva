@@ -20,17 +20,13 @@ def find_hidden_messages(path):
     return "".join(hidden_msg)
 
 
-"""
-naive solution
-def find_hidden_messages(path):
-    img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
-    hidden_msg = []
-    for j in range(len(img[0])):
-        for i in range(len(img)):
-            if img[i][j] == 1:  # pixel is black
-                hidden_msg.append(i)
-                break
+def main():
+    """
+     Receives a path to an image with a hidden message and calls the function to extract the hidden message and print it
+    """
+    image_path = input("Enter the path to the file: ")
+    print(find_hidden_messages(image_path))
 
-    hidden_msg = [chr(char) for char in hidden_msg]
-    return "".join(hidden_msg)
-"""
+
+if __name__ == "__main__":
+    main()
